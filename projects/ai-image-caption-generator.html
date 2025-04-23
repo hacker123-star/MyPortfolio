@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Image Caption Generator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans min-h-screen">
+  <div class="max-w-2xl mx-auto py-10 px-4">
+    <h1 class="text-3xl font-bold mb-4 text-teal-400">AI Image Caption Generator</h1>
+    <p class="mb-6 text-gray-300">Upload an image and let AI generate a smart and creative caption for it.</p>
+    <input type="file" id="imageInput" accept="image/*" class="mb-4 w-full p-2 bg-gray-800 rounded" />
+    <button onclick="generateCaption()" class="bg-teal-500 px-4 py-2 rounded hover:bg-teal-600">Generate Caption</button><div id="preview" class="mt-6"></div>
+<div id="captionResult" class="mt-4 text-lg text-yellow-400"></div>
+
+  </div>  <script>
+    function generateCaption() {
+      const file = document.getElementById('imageInput').files[0];
+      const preview = document.getElementById('preview');
+      const caption = document.getElementById('captionResult');
+
+      if (!file) {
+        caption.textContent = 'Please upload an image first.';
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        preview.innerHTML = `<img src="${e.target.result}" alt="Image preview" class="w-full max-h-80 object-cover rounded">`;
+      };
+      reader.readAsDataURL(file);
+
+      // Simulated AI caption (mocked)
+      caption.innerHTML = 'Analyzing...';
+      setTimeout(() => {
+        const fakeCaptions = [
+          "A scenic view that feels like freedom.",
+          "Moments like this tell a thousand stories.",
+          "Captured beauty in motion.",
+          "When nature meets perfection."
+        ];
+        const random = fakeCaptions[Math.floor(Math.random() * fakeCaptions.length)];
+        caption.textContent = random;
+      }, 1500);
+    }
+  </script></body>
+</html>

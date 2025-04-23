@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Resume Analyzer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans min-h-screen">
+  <div class="max-w-3xl mx-auto py-10 px-4">
+    <h1 class="text-3xl font-bold mb-4 text-teal-400">AI Resume Analyzer</h1>
+    <p class="mb-6 text-gray-300">
+      Upload your resume and get AI-based feedback on how to improve it based on job keywords and structure.
+    </p>
+    <input type="file" id="resumeFile" accept=".txt, .pdf" class="mb-4 w-full p-2 bg-gray-800 rounded" />
+    <button onclick="analyzeResume()" class="bg-teal-500 px-4 py-2 rounded hover:bg-teal-600">Analyze Resume</button><div id="analysisResult" class="mt-8 bg-gray-800 p-4 rounded shadow text-sm"></div>
+
+  </div>  <script>
+    async function analyzeResume() {
+      const resultBox = document.getElementById('analysisResult');
+      const fileInput = document.getElementById('resumeFile');
+      const file = fileInput.files[0];
+
+      if (!file) {
+        resultBox.innerText = 'Please upload a resume file.';
+        return;
+      }
+
+      resultBox.innerText = 'Analyzing...';
+
+      // Simulate basic analysis (mocked)
+      setTimeout(() => {
+        resultBox.innerHTML = `
+          <p class="mb-2">Top Keywords Found:</p>
+          <ul class="list-disc list-inside text-green-400">
+            <li>Teamwork</li>
+            <li>HTML/CSS/JS</li>
+            <li>Problem-solving</li>
+            <li>Leadership</li>
+          </ul>
+          <p class="mt-4 text-yellow-400">Suggestions:</p>
+          <ul class="list-disc list-inside text-yellow-400">
+            <li>Add metrics to show your achievements (e.g., "Increased traffic by 40%")</li>
+            <li>Include more action verbs like "led", "developed", "managed"</li>
+            <li>Consider tailoring the resume to a specific job description</li>
+          </ul>
+        `;
+      }, 1500);
+    }
+  </script></body>
+</html>

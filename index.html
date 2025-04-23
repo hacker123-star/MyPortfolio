@@ -1,64 +1,49 @@
 <!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rovan Speth | Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rovan Speth - Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-  </style>
 </head>
-<body class="bg-gray-900 text-white">
-  <header class="p-6 bg-gray-800 shadow-md">
-    <div class="max-w-5xl mx-auto flex justify-between items-center">
-      <h1 class="text-3xl font-bold">Rovan Speth</h1>
-      <nav class="space-x-4">
-        <a href="#about" class="hover:text-teal-400">About</a>
-        <a href="#projects" class="hover:text-teal-400">Projects</a>
-        <a href="#skills" class="hover:text-teal-400">Skills</a>
-        <a href="#contact" class="hover:text-teal-400">Contact</a>
-      </nav>
-    </div>
-  </header>  <section id="about" class="max-w-5xl mx-auto p-8">
-    <h2 class="text-2xl font-semibold mb-4">About Me</h2>
-    <p class="text-gray-300">
-      I'm Rovan Speth, a passionate Web Developer, Graphic Designer, and Data Entry Specialist. With a wide range of coding knowledge and a flair for aesthetics, I blend creativity with technical expertise to build innovative solutions. I'm driven by curiosity and the excitement of turning ideas into real digital experiences.
-    </p>
-  </section>  <section id="projects" class="max-w-5xl mx-auto p-8">
-    <h2 class="text-2xl font-semibold mb-4">Projects</h2>
-    <div class="grid gap-6 md:grid-cols-2">
-      <div class="bg-gray-800 p-4 rounded-lg shadow-md">
-        <h3 class="text-xl font-bold mb-2">Live Movie Watch Site</h3>
-        <p class="text-gray-400">A platform to watch Google Drive videos with friends featuring live chat and voice chat functionality.</p>
-      </div>
-      <div class="bg-gray-800 p-4 rounded-lg shadow-md">
-        <h3 class="text-xl font-bold mb-2">AI Chatbot</h3>
-        <p class="text-gray-400">A personalized chatbot using HTML, CSS, JavaScript, and ChatGPT API for conversational AI.</p>
-      </div>
-    </div>
-  </section>  <section id="skills" class="max-w-5xl mx-auto p-8">
-    <h2 class="text-2xl font-semibold mb-4">Skills</h2>
-    <div class="flex flex-wrap gap-3">
-      <span class="bg-teal-600 px-3 py-1 rounded-full">HTML</span>
-      <span class="bg-teal-600 px-3 py-1 rounded-full">CSS</span>
-      <span class="bg-teal-600 px-3 py-1 rounded-full">JavaScript</span>
-      <span class="bg-teal-600 px-3 py-1 rounded-full">Python</span>
-      <span class="bg-teal-600 px-3 py-1 rounded-full">Tailwind</span>
-      <span class="bg-teal-600 px-3 py-1 rounded-full">PHP</span>
-      <span class="bg-teal-600 px-3 py-1 rounded-full">C</span>
-      <span class="bg-teal-600 px-3 py-1 rounded-full">C#</span>
-      <span class="bg-teal-600 px-3 py-1 rounded-full">C++</span>
-      <span class="bg-teal-600 px-3 py-1 rounded-full">AI</span>
-    </div>
-  </section>  <section id="contact" class="max-w-5xl mx-auto p-8">
-    <h2 class="text-2xl font-semibold mb-4">Contact</h2>
-    <p>Email: <a href="mailto:rovanspeth@gmail.com" class="text-teal-400">rovanspeth@gmail.com</a></p>
-    <p>Phone: <a href="tel:9289053593" class="text-teal-400">9289053593</a></p>
-  </section>  <footer class="text-center py-6 text-gray-500 text-sm">
-    &copy; 2025 Rovan Speth. All rights reserved.
-  </footer>
+<body class="bg-gray-900 text-white font-sans">
+  <header class="text-center py-10">
+    <h1 class="text-4xl font-bold text-teal-400">Rovan Speth</h1>
+    <p class="text-gray-400 mt-2">Web Developer | Graphic Designer | Data Entry Specialist</p>
+    <p class="text-gray-500 text-sm">HTML, CSS, JS, Python, Tailwind, PHP, C, C#, C++, AI and more</p>
+    <p class="text-sm mt-2">Email: rovanspeth@gmail.com | Phone: 9289053593</p>
+  </header>  <section class="max-w-6xl mx-auto px-4 py-8">
+    <h2 class="text-2xl font-semibold text-teal-300 mb-6">Projects</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- Project Card -->
+      <div class="bg-gray-800 p-4 rounded-xl shadow-xl">
+        <h3 class="text-xl font-bold text-yellow-400">AI Resume Analyzer</h3>
+        <p class="text-gray-300 mt-2">Upload a resume and get keyword highlights and improvement suggestions using AI.</p>
+        <a href="projects/ai-resume-analyzer.html" class="text-teal-400 hover:underline mt-2 inline-block">View Project</a>
+      </div><div class="bg-gray-800 p-4 rounded-xl shadow-xl">
+    <h3 class="text-xl font-bold text-yellow-400">Real-Time Code Editor</h3>
+    <p class="text-gray-300 mt-2">Edit HTML, CSS, and JavaScript with instant preview.</p>
+    <a href="projects/real-time-code-editor.html" class="text-teal-400 hover:underline mt-2 inline-block">View Project</a>
+  </div>
+
+  <div class="bg-gray-800 p-4 rounded-xl shadow-xl">
+    <h3 class="text-xl font-bold text-yellow-400">AI Image Caption Generator</h3>
+    <p class="text-gray-300 mt-2">Upload an image and get a smart AI-generated caption.</p>
+    <a href="projects/ai-image-caption-generator.html" class="text-teal-400 hover:underline mt-2 inline-block">View Project</a>
+  </div>
+
+  <div class="bg-gray-800 p-4 rounded-xl shadow-xl">
+    <h3 class="text-xl font-bold text-yellow-400">Taskify - Voice To-Do List</h3>
+    <p class="text-gray-300 mt-2">Add tasks by typing or speaking using voice recognition.</p>
+    <a href="projects/taskify-voice-todo.html" class="text-teal-400 hover:underline mt-2 inline-block">View Project</a>
+  </div>
+
+  <div class="bg-gray-800 p-4 rounded-xl shadow-xl md:col-span-2">
+    <h3 class="text-xl font-bold text-yellow-400">Movie Watch Party+</h3>
+    <p class="text-gray-300 mt-2">Watch videos with friends, chat, send emojis and simulate Google login.</p>
+    <a href="projects/movie-watch-party-plus.html" class="text-teal-400 hover:underline mt-2 inline-block">View Project</a>
+  </div>
+</div>
+
+  </section>
 </body>
-</html>
+          </html>

@@ -1,216 +1,235 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rovan Speth | Graphic Designer</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rohan Shukla – Computer Operator</title>
+  <meta name="description" content="Resume website for Rohan Shukla – Computer Operator" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    :root {
+      --bg: #0b0d12;
+      --card: #121621;
+      --muted: #9aa4b2;
+      --text: #e6edf3;
+      --accent: #66a6ff;
+      --accent-2: #8fd3f4;
+      --chip: rgba(102,166,255,.15);
+      --border: 1px solid rgba(255,255,255,.08);
     }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; }
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #121212;
-      color: #f5f5f5;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(180deg, #0b0d12 0%, #0e1320 100%);
+      color: var(--text);
       line-height: 1.6;
     }
-    header {
-      background: #1f1f1f;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header h1 {
-      color: #00ffcc;
-    }
-    .menu-toggle {
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-    .side-nav {
-      height: 100%;
-      width: 0;
-      position: fixed;
-      z-index: 1000;
-      top: 0;
-      left: 0;
-      background-color: #222;
-      overflow-x: hidden;
-      transition: 0.3s;
-      padding-top: 60px;
-    }
-    .side-nav a {
-      padding: 8px 32px;
-      text-decoration: none;
-      font-size: 1.2rem;
-      color: #00ffcc;
-      display: block;
-      transition: 0.2s;
-    }
-    .side-nav a:hover {
-      background-color: #444;
-    }
-    .section {
-      padding: 2rem;
-    }
-    .section h2 {
-      color: #00ffcc;
-      margin-bottom: 1rem;
-    }
-    .carousel {
-      position: relative;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-    }
-    .carousel::-webkit-scrollbar {
-      display: none;
-    }
-    .carousel-track {
-      display: flex;
-      gap: 1rem;
-    }
-    .carousel-item {
-      flex: 0 0 auto;
-      scroll-snap-align: center;
-      transition: transform 0.5s ease, opacity 0.5s ease;
-      cursor: pointer;
-    }
-    .carousel-item img {
-      border-radius: 10px;
-      box-shadow: 0 0 15px #000;
-      transition: transform 0.3s ease;
-      width: 300px;
-    }
-    .carousel-item.main img {
-      transform: scale(1.1);
-      z-index: 3;
-    }
-    .carousel-item.back {
-      opacity: 0.6;
-      transform: scale(0.9);
-      z-index: 1;
-    }
-    .contact-links {
-      max-width: 500px;
-      margin: auto;
-      text-align: center;
-    }
-    .contact-links a {
-      display: inline-block;
-      margin: 1rem;
-      padding: 0.8rem 1.2rem;
-      border-radius: 5px;
-      background: #00ffcc;
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-    .contact-links a:hover {
-      background: #00ddb3;
-    }
-    footer {
-      background: #1f1f1f;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-    #fullscreen-modal {
-      display: none;
-      position: fixed;
-      z-index: 2000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.9);
-    }
-    #fullscreen-modal img {
-      display: block;
-      margin: auto;
-      max-width: 90%;
-      max-height: 90%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+}
+header.hero {
+  grid-column: 1 / -1;
+  background: radial-gradient(1200px 400px at 10% -20%, rgba(102,166,255,.15), transparent),
+              radial-gradient(1000px 500px at 90% 0%, rgba(143,211,244,.12), transparent);
+  border: var(--border);
+  border-radius: 20px;
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.avatar {
+  width: 72px; height: 72px; border-radius: 16px;
+  background: linear-gradient(135deg, #66a6ff, #8fd3f4);
+  display: grid; place-items: center; font-weight: 700; color: #0b0d12; font-size: 28px;
+  box-shadow: 0 10px 30px rgba(102,166,255,.35);
+  user-select: none;
+}
+.hero .title { font-size: clamp(24px, 3vw, 34px); font-weight: 700; margin: 0; }
+.hero .subtitle { margin: 2px 0 0; color: var(--muted); }
+
+.sidebar, .main {
+  background: rgba(18,22,33,.7);
+  border: var(--border);
+  border-radius: 16px;
+  padding: 18px;
+  backdrop-filter: blur(4px);
+}
+
+.section + .section { margin-top: 18px; }
+.section h3 { margin: 0 0 10px; font-size: 15px; letter-spacing: .12em; text-transform: uppercase; color: #b7c2d0; }
+.kvs { display: grid; gap: 6px; }
+.kvs div { display: grid; grid-template-columns: 110px 1fr; gap: 8px; }
+.kvs .k { color: var(--muted); }
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { padding: 6px 10px; background: var(--chip); border: 1px solid rgba(102,166,255,.25); border-radius: 999px; font-size: 12px; }
+
+.main .block { background: rgba(255,255,255,.02); border: var(--border); border-radius: 12px; padding: 16px; }
+.main .block + .block { margin-top: 14px; }
+.block h4 { margin: 0 0 6px; font-size: 16px; }
+.block .meta { color: var(--muted); font-size: 13px; margin-bottom: 8px; }
+ul.clean { margin: 0; padding-left: 18px; }
+
+.toolbar { position: sticky; top: 8px; display: flex; gap: 8px; }
+.btn { appearance: none; border: var(--border); background: #161b26; color: var(--text); padding: 8px 12px; border-radius: 10px; cursor: pointer; font-weight: 600; }
+.btn:active { transform: translateY(1px); }
+
+footer { grid-column: 1 / -1; color: var(--muted); text-align: center; padding: 18px 0; font-size: 12px; }
+
+/* Responsive */
+@media (max-width: 860px) {
+  .container { grid-template-columns: 1fr; }
+  .sidebar, .main { padding: 16px; }
+}
+
+/* Print styles */
+@media print {
+  :root { --bg: #fff; --text: #000; }
+  body { background: #fff; color: #000; }
+  .btn, .toolbar, .avatar { display: none !important; }
+  .container { gap: 12px; padding: 0; }
+  .sidebar, .main, header.hero { border: 1px solid #000; }
+}
+
   </style>
 </head>
 <body>
-  <header>
-    <h1>Rovan Speth</h1>
-    <span class="menu-toggle" onclick="openNav()">☰</span>
-  </header>
-
-  <div id="sideNav" class="side-nav">
-    <a href="javascript:void(0)" onclick="closeNav()">✖ Close</a>
-    <a href="#about">About Me</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact</a>
-  </div>
-
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>Hey! I'm <strong>Rovan Speth</strong>, a self-taught graphic designer specializing in eye-catching YouTube thumbnails. I blend color theory, composition, and creativity to help creators boost their CTR and stand out. I'm passionate about storytelling through visuals and turning ideas into impactful designs.</p>
-    <p>Tools I use: Photoshop, Illustrator, Canva, Figma. I love working with creators, agencies, and brands that aim to leave a strong impression.</p>
-  </section>
-
-  <section id="portfolio" class="section">
-    <h2>My Work</h2>
-    <div class="carousel">
-      <div class="carousel-track">
-        <div class="carousel-item back"><img src="media/1.jpg" alt="Thumbnail 1" onclick="zoomImage(this.src)" /></div>
-        <div class="carousel-item main"><img src="media/2.jpg" alt="Thumbnail 2" onclick="zoomImage(this.src)" /></div>
-        <div class="carousel-item back"><img src="media/3.jpeg" alt="Thumbnail 3" onclick="zoomImage(this.src)" /></div>
-        <div class="carousel-item back"><img src="media/4.jpeg" alt="Thumbnail 4" onclick="zoomImage(this.src)" /></div>
-        <div class="carousel-item back"><img src="media/5.jpeg" alt="Thumbnail 5" onclick="zoomImage(this.src)" /></div>
-        <div class="carousel-item back"><img src="media/6.jpg" alt="Thumbnail 6" onclick="zoomImage(this.src)" /></div>
+  <div class="container">
+    <header class="hero" role="banner">
+      <div class="avatar" aria-hidden="true">RS</div>
+      <div>
+        <h1 class="title">Rohan Shukla</h1>
+        <p class="subtitle">Computer Operator</p>
+        <div class="toolbar" aria-label="Actions">
+          <button class="btn" id="printBtn" title="Print or Save as PDF">Print / Save PDF</button>
+          <a class="btn" id="mailBtn" href="mailto:shuklarohan2021@gmail.com" title="Email">Email</a>
+          <a class="btn" id="callBtn" href="tel:+919289053593" title="Call">Call</a>
+        </div>
       </div>
+    </header><!-- SIDEBAR -->
+<aside class="sidebar" role="complementary">
+  <section class="section" aria-labelledby="contact">
+    <h3 id="contact">Contact</h3>
+    <div class="kvs">
+      <div><span class="k">Phone</span><span><a href="tel:+919289053593">+91 92890 53593</a></span></div>
+      <div><span class="k">Email</span><span><a href="mailto:shuklarohan2021@gmail.com">shuklarohan2021@gmail.com</a></span></div>
+      <div><span class="k">Location</span><span>Ganesh Nagar, New Delhi</span></div>
     </div>
   </section>
 
-  <section id="contact" class="section">
-    <h2>Contact Me</h2>
-    <div class="contact-links">
-      <a href="https://instagram.com/og.rov" target="_blank">Instagram</a>
-      <a href="https://t.me/momo_mui" target="_blank">Telegram</a>
+  <section class="section" aria-labelledby="skills">
+    <h3 id="skills">Skills</h3>
+    <div class="chips" aria-label="skills">
+      <span class="chip">Microsoft Office (All)</span>
+      <span class="chip">Editing (Photo & Video)</span>
+      <span class="chip">Tally</span>
+      <span class="chip">Quick Learner</span>
     </div>
   </section>
 
-  <footer>
-    <p>© 2025 Rovan Speth. All rights reserved.</p>
-  </footer>
+  <section class="section" aria-labelledby="languages">
+    <h3 id="languages">Languages</h3>
+    <div class="chips">
+      <span class="chip">English</span>
+      <span class="chip">Hindi</span>
+    </div>
+  </section>
 
-  <div id="fullscreen-modal" onclick="closeModal()">
-    <img src="" alt="Zoomed" id="modal-img">
-  </div>
+  <section class="section" aria-labelledby="achievements">
+    <h3 id="achievements">Achievements</h3>
+    <ul class="clean">
+      <li>Computer Course (1 year) – Lal Bahadur Shastri Institute</li>
+      <li>2nd Position in Intermediate Education</li>
+      <li>Freelancing Experience(s)</li>
+    </ul>
+  </section>
 
-  <script>
-    function openNav() {
-      document.getElementById("sideNav").style.width = "250px";
-    }
-    function closeNav() {
-      document.getElementById("sideNav").style.width = "0";
-    }
-    function zoomImage(src) {
-      const modal = document.getElementById("fullscreen-modal");
-      const modalImg = document.getElementById("modal-img");
-      modalImg.src = src;
-      modal.style.display = "block";
-    }
-    function closeModal() {
-      document.getElementById("fullscreen-modal").style.display = "none";
-    }
-  </script>
-</body>
-  </html>
+  <section class="section" aria-labelledby="personal">
+    <h3 id="personal">Personal Details</h3>
+    <div class="kvs">
+      <div><span class="k">Date of Birth</span><span>20 August 2005</span></div>
+      <div><span class="k">Gender</span><span>Male</span></div>
+      <div><span class="k">Nationality</span><span>Indian</span></div>
+      <div><span class="k">Hobbies</span><span>Coding, Reading Books, Watching Series</span></div>
+      <div><span class="k">Experience</span><span>Total 1 Year 4 Months</span></div>
+    </div>
+  </section>
+</aside>
+
+<!-- MAIN -->
+<main class="main" role="main">
+  <section class="section" aria-labelledby="profile">
+    <h3 id="profile">Profile</h3>
+    <div class="block">
+      <p>Dedicated and enthusiastic professional with a strong passion for coding and problem‑solving. Motivated by a desire to create efficient solutions, I thrive in dynamic environments where I can contribute my skills in turning ideas into functional realities.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="experience">
+    <h3 id="experience">Work Experience</h3>
+    <article class="block" aria-labelledby="role1">
+      <h4 id="role1">Computer Operator – Unicorn Engineers (Laxmi Nagar)</h4>
+      <div class="meta">2024 – 2025</div>
+      <ul class="clean">
+        <li>Managed data entry and maintained system efficiency.</li>
+        <li>Supported routine technical tasks to ensure smooth operations.</li>
+        <li>Enhanced technical skills with strong attention to detail and problem‑solving.</li>
+      </ul>
+    </article>
+    <article class="block" aria-labelledby="role2">
+      <h4 id="role2">Call Agent – Insight Customer Call Solution (ICCS), Noida</h4>
+      <div class="meta">2023 – 2024</div>
+      <ul class="clean">
+        <li>Provided customer support: addressed inquiries and troubleshot issues.</li>
+        <li>Maintained accurate records and ensured customer satisfaction.</li>
+        <li>Practiced effective communication to deliver seamless experiences.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="section" aria-labelledby="education">
+    <h3 id="education">Education</h3>
+    <div class="block">
+      <h4>Bachelor's of Commerce (Honours) – School of Open Learning, University of Delhi</h4>
+      <div class="meta">2023 – Present · Result: Pursuing</div>
+    </div>
+    <div class="block">
+      <h4>Intermediate (Commerce) – Rajkiya Sarvodaya Bal Vidhyalaya (CBSE)</h4>
+      <div class="meta">2021 · Result: 76.2%</div>
+    </div>
+    <div class="block">
+      <h4>Matriculation – Rajkiya Sarvodaya Bal Vidhyalaya (CBSE)</h4>
+      <div class="meta">2019 · Result: 73%</div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="declaration">
+    <h3 id="declaration">Declaration</h3>
+    <div class="block">
+      <p>I hereby declare that the above information is true and correct to the best of my knowledge and belief.</p>
+      <p><strong>Date:</strong> __/__/____ &nbsp;&nbsp; <strong>Place:</strong> _________________________ &nbsp;&nbsp; <strong>Signature:</strong> _____________________</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © <span id="year"></span> Rohan Shukla • This single‑file site is optimized for mobile (SPCK) and print.
+</footer>
+
+  </div>  <script>
+    // Simple helpers
+    document.getElementById('printBtn').addEventListener('click', () => window.print());
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // If user opens on phone, ensure tel/mail links are usable; nothing else needed
+  </script></body>
+</html>

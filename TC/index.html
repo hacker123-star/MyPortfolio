@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TutorConnect - Find Your Perfect Tutor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">TutorConnect</div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#tutors">Find Tutors</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#become-tutor">Become a Tutor</a></li>
+                    <li><a href="#contact" class="btn-primary">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Find the Perfect Tutor for Your Learning Journey</h1>
+                <p>Connect with qualified tutors for online and offline classes across all subjects</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary btn-large">Find a Tutor</button>
+                    <button class="btn-secondary btn-large">Become a Tutor</button>
+                </div>
+            </div>
+            <div class="hero-search">
+                <div class="search-box">
+                    <input type="text" placeholder="Search subjects (Math, Science, English...)" id="searchInput">
+                    <select id="classMode">
+                        <option value="">Mode</option>
+                        <option value="online">Online</option>
+                        <option value="offline">Offline</option>
+                        <option value="both">Both</option>
+                    </select>
+                    <button class="btn-search">Search</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Why Choose TutorConnect?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍🏫</div>
+                    <h3>Verified Tutors</h3>
+                    <p>All tutors are background-checked and verified for quality education</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💻</div>
+                    <h3>Online & Offline</h3>
+                    <p>Choose between online video classes or in-person tutoring</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Ratings & Reviews</h3>
+                    <p>Read genuine reviews from students to find the best tutors</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>Flexible Scheduling</h3>
+                    <p>Book sessions at your convenient time with easy scheduling</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Tutors Section -->
+    <section class="tutors" id="tutors">
+        <div class="container">
+            <h2>Featured Tutors</h2>
+            <div class="tutors-grid">
+                <div class="tutor-card">
+                    <div class="tutor-image">
+                        <div class="tutor-badge">Top Rated</div>
+                    </div>
+                    <div class="tutor-info">
+                        <h3>Priya Sharma</h3>
+                        <p class="tutor-subject">Mathematics | Class 8-12</p>
+                        <div class="tutor-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="rating-text">4.9 (127 reviews)</span>
+                        </div>
+                        <div class="tutor-modes">
+                            <span class="mode-badge online">Online</span>
+                            <span class="mode-badge offline">Offline</span>
+                        </div>
+                        <div class="tutor-price">₹500/hour</div>
+                        <button class="btn-primary btn-full">View Profile</button>
+                    </div>
+                </div>
+
+                <div class="tutor-card">
+                    <div class="tutor-image">
+                        <div class="tutor-badge">Verified</div>
+                    </div>
+                    <div class="tutor-info">
+                        <h3>Rajesh Kumar</h3>
+                        <p class="tutor-subject">Physics & Chemistry | JEE/NEET</p>
+                        <div class="tutor-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="rating-text">4.8 (95 reviews)</span>
+                        </div>
+                        <div class="tutor-modes">
+                            <span class="mode-badge online">Online</span>
+                        </div>
+                        <div class="tutor-price">₹700/hour</div>
+                        <button class="btn-primary btn-full">View Profile</button>
+                    </div>
+                </div>
+
+                <div class="tutor-card">
+                    <div class="tutor-image">
+                        <div class="tutor-badge">New</div>
+                    </div>
+                    <div class="tutor-info">
+                        <h3>Anjali Mehta</h3>
+                        <p class="tutor-subject">English & Hindi | Class 1-10</p>
+                        <div class="tutor-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="rating-text">4.7 (64 reviews)</span>
+                        </div>
+                        <div class="tutor-modes">
+                            <span class="mode-badge offline">Offline</span>
+                        </div>
+                        <div class="tutor-price">₹400/hour</div>
+                        <button class="btn-primary btn-full">View Profile</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Search & Browse</h3>
+                    <p>Find tutors by subject, location, price, and availability</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Compare & Select</h3>
+                    <p>Review profiles, ratings, and choose the best tutor for you</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Book & Pay</h3>
+                    <p>Schedule sessions and make secure payments online</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Start Learning</h3>
+                    <p>Attend classes and track your progress with your tutor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="become-tutor">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Are You a Tutor?</h2>
+                <p>Join our platform and connect with thousands of students looking for quality education</p>
+                <button class="btn-secondary btn-large">Register as Tutor</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>TutorConnect</h3>
+                    <p>Connecting students with quality tutors for online and offline learning.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#tutors">Find Tutors</a></li>
+                        <li><a href="#become-tutor">Become a Tutor</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>Email: info@tutorconnect.com</p>
+                    <p>Phone: +91 12345 67890</p>
+                    <div class="social-links">
+                        <a href="#">FB</a>
+                        <a href="#">TW</a>
+                        <a href="#">IN</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TutorConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
